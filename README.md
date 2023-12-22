@@ -1,6 +1,6 @@
 Let's Go!
 
-A RESTful multi-module web-service for posting and sharing events and find companions to participate in them.
+My first pet project. A RESTful multi-module web-service for posting and sharing events and find companions to participate in them.
 
 The application serves as an event listing platform where users can propose events and gather participants.
 
