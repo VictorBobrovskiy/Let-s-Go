@@ -10,7 +10,7 @@ import java.util.Collection;
 
 @Repository
 public interface EndpointHitRepository extends JpaRepository<EndpointHit, Long> {
-    @Query("select new ru.practicum.dto.ViewStatsDto(ap.name, eh.uri, count(eh.ip)) " +
+    @Query("select new com.digsol.dto.ViewStatsDto(ap.name, eh.uri, count(eh.ip)) " +
             "from EndpointHit as eh " +
             "join fetch App as ap on ap.id = eh.app.id " +
             "where eh.timestamp >= :start " +
@@ -21,7 +21,7 @@ public interface EndpointHitRepository extends JpaRepository<EndpointHit, Long> 
     Collection<ViewStatsDto> getViewStats(LocalDateTime start, LocalDateTime end, Collection<String> uris);
 
 
-    @Query("select new ru.practicum.dto.ViewStatsDto(ap.name, eh.uri, count(distinct eh.ip)) " +
+    @Query("select new com.digsol.dto.ViewStatsDto(ap.name, eh.uri, count(distinct eh.ip)) " +
             "from EndpointHit as eh " +
             "join fetch App as ap on ap.id = eh.app.id " +
             "where eh.timestamp >= :start " +

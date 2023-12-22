@@ -14,11 +14,11 @@ import com.digsol.main.category.Category;
 import com.digsol.main.category.CategoryNotFoundException;
 import com.digsol.main.category.CategoryRepository;
 import com.digsol.main.error.AccessDeniedException;
-import ru.practicum.main.event.*;
+import com.digsol.main.event.*;
 import com.digsol.main.location.Location;
 import com.digsol.main.location.LocationService;
 import com.digsol.main.rating.LikeService;
-import ru.practicum.main.request.*;
+import com.digsol.main.request.*;
 
 import java.time.LocalDateTime;
 import java.util.Collection;

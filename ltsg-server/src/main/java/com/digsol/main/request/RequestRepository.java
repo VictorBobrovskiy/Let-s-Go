@@ -17,7 +17,7 @@ public interface RequestRepository extends JpaRepository<Request, Long> {
 
     Collection<Request> findAllByIdIn(Collection<Long> ids);
 
-    @Query("select new ru.practicum.main.request.RequestCount(req.event.id, count(req.id)) " +
+    @Query("select new com.digsol.main.request.RequestCount(req.event.id, count(req.id)) " +
             "from Request as req " +
             "where req.event.id in :eventIds " +
             "and req.status = 'CONFIRMED' " +

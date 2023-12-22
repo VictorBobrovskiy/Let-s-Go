@@ -12,7 +12,7 @@
 	<name>Let's Go</name>
 	<modules>
 		<module>stats-server</module>
-		<module>lsg-server</module>
+		<module>ltsg-server</module>
 	</modules>
 
 	<groupId>com.digsol</groupId>
