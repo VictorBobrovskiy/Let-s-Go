@@ -9,7 +9,7 @@ services:
     depends_on:
           - stats-db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://stats-db:5432/lsg-stats
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://stats-db:5432/ltsg-stats
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=root
 
@@ -24,9 +24,9 @@ services:
       - POSTGRES_DB=stats
 
   ewm-service:
-    build: lsg-server
-    image: lsg-server
-    container_name: lsg-server
+    build: ltsg-server
+    image: ltsg-server
+    container_name: ltsg-server
     ports:
       - "8080:8080"
     depends_on:
@@ -34,7 +34,7 @@ services:
     environment:
       - GOOGLE_API_KEY=AIzaSyBJkzcFuwZ3LlsSX_ruNYOj8hNT9aa92_w
       - STATS_SERVER_URL=http://stats-server:9090
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://main-db:5432/lsg-main
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://main-db:5432/ltsg-main
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=root
 
